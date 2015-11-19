@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     let hamburguesa = ColeccionDeHamburguesas()
     let pais = ColeccionDePaises()
+    let colores = Colores()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,8 @@ class ViewController: UIViewController {
     @IBAction func mostrar(sender: AnyObject) {
         lblHamburguesa.text = hamburguesa.obtieneHamburguesa()
         lblPais.text = pais.obtienePais()
+        let colorAleatorio = colores.obtieneColor()
+        view.backgroundColor = colorAleatorio
     }
 
 }
